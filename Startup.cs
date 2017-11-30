@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using okc_quality_reporting.Models;
 
 namespace okc_quality_reporting
 {
@@ -22,6 +24,9 @@ namespace okc_quality_reporting
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddDbContext<okc_quality_reportingContext>(options =>
+                    options.UseSqlite("Data Source=ReportData.db"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,7 +47,7 @@ namespace okc_quality_reporting
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=ReportData}/{action=Index}/{id?}");
             });
         }
     }
