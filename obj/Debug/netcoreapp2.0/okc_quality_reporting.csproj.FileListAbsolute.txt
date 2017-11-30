@@ -1,0 +1,10 @@
+/home/peter/projects/okc_quality_reporting/bin/Debug/netcoreapp2.0/okc_quality_reporting.deps.json
+/home/peter/projects/okc_quality_reporting/bin/Debug/netcoreapp2.0/okc_quality_reporting.runtimeconfig.json
+/home/peter/projects/okc_quality_reporting/bin/Debug/netcoreapp2.0/okc_quality_reporting.runtimeconfig.dev.json
+/home/peter/projects/okc_quality_reporting/bin/Debug/netcoreapp2.0/okc_quality_reporting.dll
+/home/peter/projects/okc_quality_reporting/bin/Debug/netcoreapp2.0/okc_quality_reporting.pdb
+/home/peter/projects/okc_quality_reporting/obj/Debug/netcoreapp2.0/okc_quality_reporting.csproj.CoreCompileInputs.cache
+/home/peter/projects/okc_quality_reporting/obj/Debug/netcoreapp2.0/okc_quality_reporting.AssemblyInfoInputs.cache
+/home/peter/projects/okc_quality_reporting/obj/Debug/netcoreapp2.0/okc_quality_reporting.AssemblyInfo.cs
+/home/peter/projects/okc_quality_reporting/obj/Debug/netcoreapp2.0/okc_quality_reporting.dll
+/home/peter/projects/okc_quality_reporting/obj/Debug/netcoreapp2.0/okc_quality_reporting.pdb
