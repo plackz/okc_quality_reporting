@@ -11,9 +11,10 @@ using System;
 namespace okc_quality_reporting.Migrations
 {
     [DbContext(typeof(okc_quality_reportingContext))]
-    partial class okc_quality_reportingContextModelSnapshot : ModelSnapshot
+    [Migration("20171130062133_AddedFieldTarget")]
+    partial class AddedFieldTarget
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,7 +35,7 @@ namespace okc_quality_reporting.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ReportData");
+                    b.ToTable("Movie");
                 });
 #pragma warning restore 612, 618
         }

@@ -9,5 +9,6 @@ namespace okc_quality_reporting.Models
         public string Month { get; set; }
         public DateTime MonthDate { get; set; }
         public decimal CogsPercent { get; set; }
+        public decimal Target { get; set; }
     }
 }

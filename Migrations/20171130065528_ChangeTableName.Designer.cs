@@ -11,9 +11,10 @@ using System;
 namespace okc_quality_reporting.Migrations
 {
     [DbContext(typeof(okc_quality_reportingContext))]
-    partial class okc_quality_reportingContextModelSnapshot : ModelSnapshot
+    [Migration("20171130065528_ChangeTableName")]
+    partial class ChangeTableName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

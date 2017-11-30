@@ -9,6 +9,6 @@ namespace okc_quality_reporting.Models
         {            
         }
 
-        public DbSet<okc_quality_reporting.Models.ReportData> Movie { get; set; }
+        public DbSet<okc_quality_reporting.Models.ReportData> ReportData { get; set; }
     }
 }

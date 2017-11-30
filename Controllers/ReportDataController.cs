@@ -21,7 +21,7 @@ namespace okc_quality_reporting.Controllers
         // GET: ReportData
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Movie.ToListAsync());
+            return View(await _context.ReportData.ToListAsync());
         }
 
         // GET: ReportData/Details/5
@@ -32,7 +32,7 @@ namespace okc_quality_reporting.Controllers
                 return NotFound();
             }
 
-            var reportData = await _context.Movie
+            var reportData = await _context.ReportData
                 .SingleOrDefaultAsync(m => m.Id == id);
             if (reportData == null)
             {
@@ -53,7 +53,7 @@ namespace okc_quality_reporting.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Month,MonthDate,CogsPercent")] ReportData reportData)
+        public async Task<IActionResult> Create([Bind("Id,Month,MonthDate,CogsPercent,Target")] ReportData reportData)
         {
             if (ModelState.IsValid)
             {
@@ -72,7 +72,7 @@ namespace okc_quality_reporting.Controllers
                 return NotFound();
             }
 
-            var reportData = await _context.Movie.SingleOrDefaultAsync(m => m.Id == id);
+            var reportData = await _context.ReportData.SingleOrDefaultAsync(m => m.Id == id);
             if (reportData == null)
             {
                 return NotFound();
@@ -85,7 +85,7 @@ namespace okc_quality_reporting.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Month,MonthDate,CogsPercent")] ReportData reportData)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Month,MonthDate,CogsPercent,Target")] ReportData reportData)
         {
             if (id != reportData.Id)
             {
@@ -123,7 +123,7 @@ namespace okc_quality_reporting.Controllers
                 return NotFound();
             }
 
-            var reportData = await _context.Movie
+            var reportData = await _context.ReportData
                 .SingleOrDefaultAsync(m => m.Id == id);
             if (reportData == null)
             {
@@ -138,15 +138,15 @@ namespace okc_quality_reporting.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var reportData = await _context.Movie.SingleOrDefaultAsync(m => m.Id == id);
-            _context.Movie.Remove(reportData);
+            var reportData = await _context.ReportData.SingleOrDefaultAsync(m => m.Id == id);
+            _context.ReportData.Remove(reportData);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ReportDataExists(int id)
         {
-            return _context.Movie.Any(e => e.Id == id);
+            return _context.ReportData.Any(e => e.Id == id);
         }
     }
 }
